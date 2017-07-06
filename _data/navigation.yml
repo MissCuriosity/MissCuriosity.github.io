@@ -1,0 +1,13 @@
+# Site navigation links
+- title: Home
+  url: /
+
+- title: Projects
+  url: /projects/
+
+- title: About
+  url: /about/
+
+- title: MissCuriosity
+  url: //misscuriosity.github.io/
+  # url: ''
