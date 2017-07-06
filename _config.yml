@@ -42,6 +42,7 @@ background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                //misscuriosity.github.io/
+qnDomain:           //osm2s5p0k.bkt.clouddn.com/
 
 # Jekyll
 permalink:          /:title/
@@ -71,19 +72,20 @@ disqus_shortname:   taylantatli
   #ad-slot:
 #bing-verify:
 #email:
-twitter:            username
-facebook:           username
-github-url:         username
+# twitter:            username
+# facebook:           username
+github-url:         MissCuriosity
+segmentfault:       /misscuriosity
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
-instagram:          username
+# instagram:          username
 #lastfm:            username
 #tumblr:            username
 #medium:            '@username'
 #pinterest:         username
 #foursquare:        username
-steam:              username
+# steam:              username
 #dribbble:          username
 #youtube:           username
 #youtube-channel:   channel
