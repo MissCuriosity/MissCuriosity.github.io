@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-subtitle: "This is the post subtitle."
-date:   2018-03-14 22:42:35 +0800
-categories: jekyll update
-background: '/img/bg-index.jpg'
+title:  "Dinosaurs are extinct today"
+subtitle: "because they lacked opposable thumbs and the brainpower to build a space program."
+date:   2017-10-26 23:45:13 -0400
+background: '/img/posts/01.jpg'
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
