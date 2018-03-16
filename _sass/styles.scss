@@ -1,2 +1,7 @@
 // Import Core Clean Blog SCSS
 @import "../assets/vendor/startbootstrap-clean-blog/scss/clean-blog.scss";
+
+// component
+@import './component/post.scss';
+@import './component/global.scss';
+@import './component/masthead.scss';
