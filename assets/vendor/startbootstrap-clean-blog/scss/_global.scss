@@ -2,7 +2,8 @@
 body {
   font-size: 20px;
   color: $gray-900;
-  @include serif-font;
+  // @include serif-font;
+  font: 300 1em/1.8 "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
 }
 
 p {
