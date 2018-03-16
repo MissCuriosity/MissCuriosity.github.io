@@ -1,3 +1,16 @@
 body {
     font: 300 1em/1.8 "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
 }
+
+h4 {
+    position: relative;
+}
+
+h4:before {
+    content: '';
+    border-left: 5px solid #00a5bf;
+    position: absolute;
+    left: -15px;
+    height: 75%;
+    top: 12%;
+}
