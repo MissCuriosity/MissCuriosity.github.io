@@ -12,6 +12,8 @@ category: HTTP
 
 2、<a href="#2">第二章<a/>
 
+3、<a href="#3">第三章<a/>
+
 <a id="1" href="javascript:void(0)"></a>
 #### 第一章
     主要描述了客户端如何从服务器获取资源
@@ -68,3 +70,32 @@ category: HTTP
 ###### URL字符集
 
     会对特殊字符进行转义
+
+***
+
+<a id="3" href="javascript:void(0)"></a>
+#### 第三章
+    主要讲报文
+
+###### 报文流
+
+    报文方向: 流入[服务器]; 流出[从服务器流出]。
+    报文流向对象: 上游、下游  => 报文始终是从上游流向下游。上、下游的概念是相对的
+
+###### 报文的组成部分、语法
+
+    组成部分：起始行[请求行、响应行], 首部, 实体
+
+> 起始行
+
+        请求行: <method> <request-url> <version>
+        响应行: <version> <status-code> <reason-phrase>
+
+###### method
+
+    种类: GET, HEAD, OPTIONS, POST, PUT, DELETE
+    安全方法: GET, HEAD
+
+> GET和HEAD的区别: HEAD不会返回实体
+
+> PUT和POST的区别: PUT是将请求的主体部分存储在服务器上, POST是向服务器发送需要处理的数据
