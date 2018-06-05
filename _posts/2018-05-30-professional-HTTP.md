@@ -93,9 +93,32 @@ category: HTTP
 
 ###### method
 
-    种类: GET, HEAD, OPTIONS, POST, PUT, DELETE
+    种类: GET, HEAD, OPTIONS, POST, PUT, DELETE, TRACE
     安全方法: GET, HEAD
 
 > GET和HEAD的区别: HEAD不会返回实体
 
 > PUT和POST的区别: PUT是将请求的主体部分存储在服务器上, POST是向服务器发送需要处理的数据
+
+###### status-code
+
+    1xx     信息性状态码
+        100：服务器、客户端、代理[客户端请求中带有实体部分, 服务器必须要给出响应]
+
+    2xx     成功状态码
+    3xx     重定向状态码
+    4xx     客户端错误状态码
+    5xx     服务器错误状态码
+
+###### headers
+
+    通用首部
+        信息性首部, 通用缓存首部[Cache-Control, Pragma]
+
+    请求首部
+        Accept首部, 信息性首部, 条件请求首部, 安全请求首部, 代理请求首部
+
+    响应首部
+        信息性首部, 协商首部, 安全响应首部
+    实体首部
+        信息性首部[Allow, Location], 内容首部, 实体缓存首部[ETag, Expires, Last-Modified]
