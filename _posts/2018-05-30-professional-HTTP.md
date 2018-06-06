@@ -14,6 +14,8 @@ category: HTTP
 
 3、<a href="#3">第三章<a/>
 
+4、<a href="#4">第四章<a/>
+
 <a id="1" href="javascript:void(0)"></a>
 #### 第一章
     主要描述了客户端如何从服务器获取资源
@@ -122,3 +124,68 @@ category: HTTP
         信息性首部, 协商首部, 安全响应首部
     实体首部
         信息性首部[Allow, Location], 内容首部, 实体缓存首部[ETag, Expires, Last-Modified]
+
+<a id="4" href="javascript:void(0)"></a>
+#### 第四章
+
+    HTTP如何使用TCP连接
+    TCP链接的时延、瓶颈以及存在的障碍
+    HTTP的优化, 包括并行连接、keep-alive(持久连接)和管道化连接
+    管理连接时应该以及不应该做的事情
+
+###### TCP
+
+    HTTP使用TCP连接的优点: 可靠、无损、按序连接
+
+    可靠: TCP为HTTP提供了一条`可靠的比特传输管道`
+    按需: TCP流是分段的, 由IP分组传送
+
+> IP分组
+
+![](http://img.hb.aicdn.com/437c90f27e5da181330dee7c806eab86e6876cae26fdf-bjD53A_fw658)
+
+    一个IP分组首部(通常为20字节)
+        源和目的IP地址、长度、其他一些标记
+    一个TCP段首部(通常为20字节)
+        TCP端口号、TCP控制标记、用于数据排序和完整性检查的一些数字值
+    一个TCP数据块(0个或多个字节)
+
+> TCP连接正确运行
+
+    <源IP地址、源端口号、目的IP地址、目的端口号> => 唯一确定一条连接
+
+###### 套接字socket
+
+    TCP客户端和服务器是如何通过TCP套接字接口进行通信的
+
+![](http://img.hb.aicdn.com/6d8029ea5e6595bbb6d85515331bd0135642c7ec117d1-yrNzy0_fw658)
+
+> TCP连接时间长短
+
+    服务器距离远近, 服务器负载情况, 因特网拥挤程度
+
+> HTTP事物延误
+
+    TCP网络时延[主要因素], 客户端或服务器超载, 正在处理复杂的动态资源
+
+HTTP事物的时间线
+
+![](//img.hb.aicdn.com/c7aa60a9582a3011828dc8287e1a545dfd92bcba7efe-N6Fn4i_fw658)
+
+###### TCP性能
+
+> 影响TCP性能
+
+    握手延迟, 延迟确认, TCP慢启动, TIME WAIT累积与端口耗尽[TCP关闭连接],
+    Nagle算法与TCP NODELAY[关于IP分组中TCP数据块的大小]
+    
+
+> 握手延迟
+
+关于TCP连接时的四次握手
+
+![](http://img.hb.aicdn.com/c97482c24d1dbc8f4fc8df8937a873e9535b705e942e-JSOqqi_fw658)
+
+> TCP慢启动
+
+    目的: 限制一个TCP端点在任意时刻可以传输的分组数, 防止因特网`突然过载`或`拥塞`
