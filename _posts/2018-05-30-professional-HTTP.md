@@ -23,13 +23,13 @@ category: HTTP
 
 ###### 计算机网络五层协议结构
 
-![](http://img.hb.aicdn.com/8194fc8b8384808bca2cb20ef6d52f9f890fefffd196-jpCich_fw658)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/1-1.png)
 
 ###### 如何利用HTTP请求和响应报文操纵远程服务器上的多媒体资源
 
 在这个过程中需要通过`DNS服务`来解析域名以获取服务器IP地址
 
-![](http://img.hb.aicdn.com/e84c3c06b84c0c498968f5d6af4fdfca474eb4333423d-1kxxgz_fw658)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/1-2.png)
 
 ###### 初识TCP
 
@@ -146,7 +146,7 @@ HTTP使用TCP连接的优点: 可靠、无损、按序连接
 
 > IP分组
 
-![](http://img.hb.aicdn.com/437c90f27e5da181330dee7c806eab86e6876cae26fdf-bjD53A_fw658)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-1.png)
 
     一个IP分组首部(通常为20字节)
         源和目的IP地址、长度、其他一些标记
@@ -162,7 +162,7 @@ HTTP使用TCP连接的优点: 可靠、无损、按序连接
 
     TCP客户端和服务器是如何通过TCP套接字接口进行通信的
 
-![](http://img.hb.aicdn.com/6d8029ea5e6595bbb6d85515331bd0135642c7ec117d1-yrNzy0_fw658)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-2.png)
 
 > TCP连接时间长短
 
@@ -174,7 +174,7 @@ HTTP使用TCP连接的优点: 可靠、无损、按序连接
 
 HTTP事物的时间线
 
-![](//img.hb.aicdn.com/c7aa60a9582a3011828dc8287e1a545dfd92bcba7efe-N6Fn4i_fw658)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-3.png)
 
 ###### TCP性能
 
@@ -188,7 +188,7 @@ HTTP事物的时间线
 
 关于TCP连接时的四次握手
 
-![](http://img.hb.aicdn.com/c97482c24d1dbc8f4fc8df8937a873e9535b705e942e-JSOqqi_fw658)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-4.png)
 
 > TCP慢启动
 
@@ -212,11 +212,11 @@ TCP连接: 串行连接, 并行连接, 持久连接, 管道连接, 复用连接
 
 > 串行连接
 
-![](//img.hb.aicdn.com/43da149d2d1709005a842e8c7f301f88e33f7ec0dc20-KFwYmB_fw658)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-6.png)
 
 > 并行连接
 
-![](//img.hb.aicdn.com/fcbd5dd148b7720379a81c9573bdb7c3f03733cefb38-o90Wvv_fw658)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-5.png)
 
 > 持久连接
 
@@ -225,4 +225,5 @@ TCP连接: 串行连接, 并行连接, 持久连接, 管道连接, 复用连接
 
 ###### 哑代理, 盲中继
 
-![](//img.hb.aicdn.com/575b951108b63ff9ae4a8bc1e03d5a5eb15cda911895a-bNq8vk_fw658)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-7.png)
+![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-8.png)
