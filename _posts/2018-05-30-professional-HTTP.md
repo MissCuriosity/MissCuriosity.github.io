@@ -23,13 +23,13 @@ category: HTTP
 
 ###### 计算机网络五层协议结构
 
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/1-1.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/1-1.png)
 
 ###### 如何利用HTTP请求和响应报文操纵远程服务器上的多媒体资源
 
 在这个过程中需要通过`DNS服务`来解析域名以获取服务器IP地址
 
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/1-2.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/1-2.png)
 
 ###### 初识TCP
 
@@ -146,7 +146,7 @@ HTTP使用TCP连接的优点: 可靠、无损、按序连接
 
 > IP分组
 
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-1.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-1.png)
 
     一个IP分组首部(通常为20字节)
         源和目的IP地址、长度、其他一些标记
@@ -162,7 +162,7 @@ HTTP使用TCP连接的优点: 可靠、无损、按序连接
 
     TCP客户端和服务器是如何通过TCP套接字接口进行通信的
 
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-2.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-2.png)
 
 > TCP连接时间长短
 
@@ -174,7 +174,7 @@ HTTP使用TCP连接的优点: 可靠、无损、按序连接
 
 HTTP事物的时间线
 
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-3.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-3.png)
 
 ###### TCP性能
 
@@ -188,7 +188,7 @@ HTTP事物的时间线
 
 关于TCP连接时的四次握手
 
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-4.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-4.png)
 
 > TCP慢启动
 
@@ -212,18 +212,38 @@ TCP连接: 串行连接, 并行连接, 持久连接, 管道连接, 复用连接
 
 > 串行连接
 
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-6.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-6.png)
 
 > 并行连接
 
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-5.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-5.png)
 
 > 持久连接
 
 * keep-alive: max, timeout
 * 持久连接时, 实体部分的长度和Content-Length一致时, 或者用分块传输编码方式编码, 才能保持持久连接
 
+> 管道化连接
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-18.png)
+
+* 必须配合持久连接使用
+* 必须按照与请求相同的顺序回送HTTP响应
+* 客户端不能用管道化的方式发送会产生副作用的请求
+
 ###### 哑代理, 盲中继
 
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-7.png)
-![](http://p5mmahmnt.bkt.clouddn.com//posts/professional-http/4-8.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-7.png)
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-8.png)
+
+###### 幂等性
+
+概念: 一个事务执行多次结果相同, 则为幂等
+
+###### Content-Length
+
+每条HTTP响应都应该有精准的Content-Length首部, 用以描述响应主体的尺寸
+
+###### 关闭连接
+![](http://p5mmahmnt.bkt.clouddn.com/posts/professional-http/4-20.png)
+
+不安全的关闭会导致重置错误[连接被对端重置]
